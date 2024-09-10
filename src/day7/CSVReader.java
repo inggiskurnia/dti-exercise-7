@@ -43,9 +43,14 @@ public class CSVReader {
     public double calculateTotalSales(int[] totalSold, double[] itemSold) {
         double totalSales = 0;
 
-        for (int i=0; i< totalSold.length; i++) {
-            totalSales += (totalSold[i] * itemSold[i]);
+        try {
+            for (int i=0; i< totalSold.length; i++) {
+                totalSales += (totalSold[i] * itemSold[i]);
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index is empty");
         }
+
         return totalSales;
     }
 
