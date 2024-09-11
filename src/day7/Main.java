@@ -38,7 +38,7 @@ public class Main {
                     System.out.println("The most bought item is : " + mostBoughtItem);
 
                     //Find least bought item
-                    String leastBoughtItem = reader.findleastBoughtItem(totalSold, productName);
+                    String leastBoughtItem = reader.findLeastBoughtItem(totalSold, productName);
                     System.out.println("The least bought item is : " + leastBoughtItem);
                 }
             }

@@ -43,14 +43,9 @@ public class CSVReader {
     public double calculateTotalSales(int[] totalSold, double[] itemSold) {
         double totalSales = 0;
 
-        try {
-            for (int i=0; i< totalSold.length; i++) {
-                totalSales += (totalSold[i] * itemSold[i]);
-            }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Array index is empty");
+        for (int i=0; i< totalSold.length; i++) {
+            totalSales += (totalSold[i] * itemSold[i]);
         }
-
         return totalSales;
     }
 
@@ -76,8 +71,8 @@ public class CSVReader {
         return item[index];
     }
 
-    public String findleastBoughtItem(int[] totalSold, String[] item) {
-        int min = 2147483647;
+    public String findLeastBoughtItem(int[] totalSold, String[] item) {
+        int min = totalSold[0];
         int index = 0;
 
         for (int i=0; i<totalSold.length; i++){
